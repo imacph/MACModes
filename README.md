@@ -1,4 +1,4 @@
-Equations (7) and (8) of Buffet et al. 2016 (Geophys. J Int.) converted to LaTeX, followed by the definitions of the symbols.
+Equations (7) and (8) of Buffet et al. 2016 (Geophys. J Int.), followed by the definitions of the symbols.
 
 ### Equations (7) and (8)
 
