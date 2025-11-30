@@ -82,8 +82,8 @@ $D_\ell^m = 2\ell(\ell+2)\sqrt{\frac{(\ell+1-m)(\ell+1+m)}{(2\ell+1)(2\ell+3)}} 
 
 Note that a common factor of $1/r^2$ has been divided out of each side of the above equations. 
 
-#### Part II Boussinesq buoyancy model:
-1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P}  - \tilde{N}^2 \tilde u_r\hat{\mathbf{r}} + E\nabla^2 \tilde{\mathbf{v}}$
+#### Part II buoyancy model:
+1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P}  - \tilde{N}^2(r) \tilde u_r\hat{\mathbf{r}} + E\nabla^2 \tilde{\mathbf{v}}$
 
 2) $\nabla \cdot \tilde{\mathbf{v}} = 0$
 
