@@ -38,7 +38,7 @@ The equations are presented in non-dimensional form. The definitions and scaling
 
 
 
-**IMPLEMENTATION PLAN:**
+### IMPLEMENTATION PLAN:
 
 We'll use a spectral representation in terms of fully normalized surface spherical harmonics, $Y_\ell^m(\theta,\varphi)$, where $\theta$ is colatitude, and $\varphi$ is longitude:
 
@@ -54,7 +54,7 @@ $$\Delta_H \tilde u_r = -\frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \
 
 
 
-**Part I** Neutral buoyancy ($N\equiv 0$) and no magnetic field: 
+#### Part I Neutral buoyancy ($N\equiv 0$) and no magnetic field: 
 
 1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P} + E\nabla^2 \tilde{\mathbf{v}}$
 
@@ -82,7 +82,7 @@ $D_\ell^m = 2\ell(\ell+2)\sqrt{\frac{(\ell+1-m)(\ell+1+m)}{(2\ell+1)(2\ell+3)}} 
 
 Note that a common factor of $1/r^2$ has been divided out of each side of the above equations. 
 
-**Part II** Boussinesq buoyancy model:
+#### Part II Boussinesq buoyancy model:
 1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P}  - \tilde{N}^2 \tilde u_r\hat{\mathbf{r}} + E\nabla^2 \tilde{\mathbf{v}}$
 
 2) $\nabla \cdot \tilde{\mathbf{v}} = 0$
@@ -120,7 +120,7 @@ $$A_\ell^m B_\ell^m W_\ell^m = C_\ell^m Z_{\ell-1}^m +D_\ell^m Z_{\ell+1}^m + \f
 
 $$i\omega U_\ell^m = W_\ell^m$$
 
-**Part III** Magnetic field:
+#### Part III Magnetic field:
 
 1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P} + E_\eta B_r \partial_r \tilde{\mathbf{b}} - \tilde{N}^2 \tilde u_r\hat{\mathbf{r}} + E\nabla^2 \tilde{\mathbf{v}}$
 
@@ -200,7 +200,7 @@ $i\omega \left( \dfrac{\ell(\ell+1)}{r^2} - \dfrac{d^2}{dr^2}\right) S_\ell^m = 
 
 Note a factor of $\dfrac{\ell(\ell+1)}{r^2}$ has been divided out of both sides of 4. and 5.
 
-**Important Notes**
+### Important Notes
 
 1) None of the equations are coupled across spherical harmonic order $m$, so this variable may be taken as a parameter.
 
