@@ -12,8 +12,9 @@ The equations are presented in non-dimensional form. The definitions and scaling
 
 *   **$\mathbf{v}$**: The velocity perturbation vector.
 *   **$\mathbf{b}$**: The magnetic field perturbation vector.
-*   **$\mathbf{u}$**: The displacement vector associated with the wave (where $\partial_t \mathbf{u} = \mathbf{v}$).
+*   **$\mathbf{u}$**: The displacement vector associated with the wave (where $\partial_t \mathbf{u} \approx \mathbf{v}$).
 *   **$t$**: Time (scaled by $\Omega^{-1}$).
+*   $r$: radial coordinate
 *   **$\hat{\mathbf{z}}$**: The unit vector along the rotation axis (associated with the mean rotation rate $\mathbf{\Omega} = \Omega \hat{\mathbf{z}}$).
 *   **$P$**: The pressure field perturbation (specifically related to the horizontal pressure gradient).
 *   **$B_r$**: The radial component of the background steady magnetic field.
@@ -21,8 +22,6 @@ The equations are presented in non-dimensional form. The definitions and scaling
 *   **$\tilde{N}^2$**: The squared dimensionless buoyancy frequency, defined as $\tilde{N}^2 = N^2 / \Omega^2$ (where $N$ is the buoyancy frequency).
 *   **$E$**: The Ekman number, defined as $E = \nu / \Omega R^2$ (representing viscous effects).
 *   **$E_\eta$**: The magnetic Ekman number, defined as $E_\eta = \eta / \Omega R^2$ (related to magnetic diffusivity).
-*   **$\partial_r$**: Partial derivative with respect to the radial coordinate.
-*   **$\nabla$**: The gradient operator (non-dimensionalized using the core radius $R$).
 
 **Scaling Factors:**
 *   **Lengthscale**: Radius of the core, $R$.
