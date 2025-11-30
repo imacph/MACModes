@@ -198,9 +198,16 @@ Note a factor of $\dfrac{\ell(\ell+1)}{r^2}$ has been divided out of both sides 
 
 1) None of the equations are coupled across spherical harmonic order $m$, so this variable may be taken as a parameter.
 
-2) The momentum equation couples toroidal terms of even (odd) degree $\ell$ with poloidal terms of odd (even) degree. Solutions are separated into symmetry classes $(Z_1,W_2,Z_3,W_4,\dots)$ and $(W_1,Z_2,W_3,Z_4,\dots)$, symmetric and anti-symmetric about the equator plane. 
+2) The momentum equation couples toroidal terms of even (odd) degree $\ell$ with poloidal terms of odd (even) degree. Solutions are separated into symmetry classes $(Z_1,W_2,Z_3,W_4,\dots)^T$ and $(W_1,Z_2,W_3,Z_4,\dots)^T$, symmetric and anti-symmetric about the equator plane. 
 
-3) The displacement and magnetic field equations decouple in both degree and order.  That part of the system is block-diagonal. 
+3) The displacement and magnetic field equations decouple in both degree and order. 
 
-4) We'll use a combined solution vector, e.g., $(Z_1,)
+4) We'll use a combined solution vector, e.g., $(Z_1,T_1,W_2,S_2,D_2,Z_3,T_3,\dots)^T$.
+
+
+
+![Description](system.png)
+
+
+
 
