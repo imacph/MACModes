@@ -43,7 +43,7 @@ The equations are presented in non-dimensional form. The definitions and scaling
 
 We'll use a spectral representation in terms of fully normalized surface spherical harmonics, $Y_\ell^m(\theta,\varphi)$, where $\theta$ is colatitude, and $\varphi$ is longitude:
 
-$$\langle Y_{\ell'}^{m'},Y_\ell^m\rangle = \int_0^{2\pi} \int_0^\pi Y_\ell^m {Y_\ell^m}^\ast \sin\theta d\theta d\varphi = \delta_{\ell',\ell}\delta_{m',m}$$
+$$\langle Y_{\ell'}^{m'},Y_\ell^m\rangle = \int_0^{2\pi} \int_0^\pi Y_\ell^m {Y_{\ell'}^{m'}}^\ast \sin\theta d\theta d\varphi = \delta_{\ell',\ell}\delta_{m',m}$$
 
 **Part I** Neutral buoyancy ($N\equiv 0$) and no magnetic field: 
 
@@ -193,3 +193,14 @@ $i\omega  T_\ell^m = B_r  \left(\dfrac{dZ_\ell^m}{dr} - \dfrac{2Z_\ell^m}{r}\rig
 $i\omega \left( \dfrac{\ell(\ell+1)}{r^2} - \dfrac{d^2}{dr^2}\right) S_\ell^m = B_r \dfrac{\ell(\ell+1)}{r^2} \left( \dfrac{d W_\ell^m}{dr} - \dfrac{2 W_\ell^m}{r}\right)-E_\eta  \left(\dfrac{\ell(\ell+1)}{r^2} - \dfrac{d^2}{dr^2}\right)^2 S_\ell^m$
 
 Note a factor of $\dfrac{\ell(\ell+1)}{r^2}$ has been divided out of both sides of 4. and 5.
+
+**Important Notes**
+
+1) None of the equations are coupled across spherical harmonic order $m$, so this variable may be taken as a parameter.
+
+2) The momentum equation couples toroidal terms of even (odd) degree $\ell$ with poloidal terms of odd (even) degree. Solutions are separated into symmetry classes $(Z_1,W_2,Z_3,W_4,\dots)$ and $(W_1,Z_2,W_3,Z_4,\dots)$, symmetric and anti-symmetric about the equator plane. 
+
+3) The displacement and magnetic field equations decouple in both degree and order.  That part of the system is block-diagonal. 
+
+4) We'll use a combined solution vector, e.g., $(Z_1,)
+
