@@ -2,9 +2,9 @@ Equations (7) and (8) of Buffet et al. 2016 (Geophys. J Int.), followed by the d
 
 ### Equations (7) and (8)
 
-$$\partial_t \mathbf{v} + 2\hat{\mathbf{z}} \times \mathbf{v} = -\nabla P + E_\eta B_r \partial_r \mathbf{b} - \tilde{N}^2 (\mathbf{u} \cdot \hat{\mathbf{r}})\hat{\mathbf{r}} + E\nabla^2 \mathbf{v} \tag{7}$$
+$\partial_t \mathbf{v} + 2\hat{\mathbf{z}} \times \mathbf{v} = -\nabla P + E_\eta B_r \partial_r \mathbf{b} - \tilde{N}^2 (\mathbf{u} \cdot \hat{\mathbf{r}})\hat{\mathbf{r}} + E\nabla^2 \mathbf{v} $
 
-$$\partial_t \mathbf{b} = B_r \partial_r \mathbf{v} + E_\eta \nabla^2 \mathbf{b} \tag{8}$$
+$\partial_t \mathbf{b} = B_r \partial_r \mathbf{v} + E_\eta \nabla^2 \mathbf{b} $
 
 ### Symbol Definitions
 
@@ -45,6 +45,16 @@ We'll use a spectral representation in terms of fully normalized surface spheric
 
 $$\langle Y_{\ell'}^{m'},Y_\ell^m\rangle = \int_0^{2\pi} \int_0^\pi Y_\ell^m {Y_{\ell'}^{m'}}^\ast \sin\theta d\theta d\varphi = \delta_{\ell',\ell}\delta_{m',m}$$
 
+These are eigenfunctions of the Laplace operator on a sphere surface:
+
+$$\Delta_H Y_{\ell}^m = \ell(\ell+1) Y_{\ell}^m$$
+
+where:
+
+$$\Delta_H \tilde u_r = -\frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \left(\sin\theta \frac{\partial \tilde u_r}{\partial \theta}\right) - \frac{1}{\sin^2\theta}\frac{\partial^2 \tilde u_r}{\partial \varphi^2}$$
+
+
+
 **Part I** Neutral buoyancy ($N\equiv 0$) and no magnetic field: 
 
 1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P} + E\nabla^2 \tilde{\mathbf{v}}$
@@ -55,7 +65,7 @@ $$\langle Y_{\ell'}^{m'},Y_\ell^m\rangle = \int_0^{2\pi} \int_0^\pi Y_\ell^m {Y_
 
 Poloidal-toroidal representation (ensures 2. is satisfied):
 
-$$\tilde{\mathbf{v}} = \sum_{{\ell'},{m'}}\left\{\nabla \times( \nabla \times (W_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})) + \nabla \times (Z_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})\right\}$$
+$$\tilde{\mathbf{v}} = \sum_{{\ell'},{m'}}\left(\nabla \times( \nabla \times (W_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})) + \nabla \times (Z_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})\right)$$
 
 1) $\left\langle\hat{r}\cdot\nabla\times 1.,Y_\ell^m\right\rangle$:
 
@@ -84,9 +94,6 @@ The added term vanishes under $\hat{r}\cdot \nabla \times$, and:
 
 $$\hat{\mathbf{r}}\cdot\nabla\times\nabla\times (-\tilde N^2\tilde u_r \hat{\mathbf{r}}) = \dfrac{\tilde N^2}{r^2} \Delta_H \tilde u_r$$
 
-where:
-
-$$\Delta_H \tilde u_r = -\frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \left(\sin\theta \frac{\partial \tilde u_r}{\partial \theta}\right) - \frac{1}{\sin^2\theta}\frac{\partial^2 \tilde u_r}{\partial \varphi^2}$$
 
 In the Toroidal-Poloidal representation:
 
@@ -127,7 +134,7 @@ $$i\omega U_\ell^m = W_\ell^m$$
 
 Introduce a poloidal-toroidal representation for the perturbation magnetic field:
 
-$$\tilde{\mathbf{b}} = \sum_{{\ell'},{m'}}\left\{\nabla \times( \nabla \times (S_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})) + \nabla \times (T_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})\right\}$$
+$$\tilde{\mathbf{b}} = \sum_{{\ell'},{m'}}\left(\nabla \times( \nabla \times (S_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})) + \nabla \times (T_{\ell'}^{m'}(r) Y_{\ell'}^{m'}(\theta,\varphi)\hat{\mathbf{r}})\right)$$
 
 This ensures 5. is satisfied. 
 
