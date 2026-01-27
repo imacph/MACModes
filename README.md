@@ -76,11 +76,32 @@ $$A_\ell^m B_\ell^m W_\ell^m = C_\ell^m Z_{\ell-1}^m +D_\ell^m Z_{\ell+1}^m$$
 Where:
 
 $A_\ell^m = i(\ell(\ell+1)\omega -2m) + \ell(\ell+1)EB_\ell^m$
-$B_\ell^m = \frac{\ell(\ell+1)}{r^2} - \dfrac{d^2}{dr^2}$
+$B_\ell^m = \frac{\ell(\ell++1)}{r^2} - \dfrac{d^2}{dr^2}$
 $C_\ell^m = 2(\ell-1)(\ell+1) \sqrt{\frac{(\ell-m)(\ell+m)}{(2\ell-1)(2\ell+1)}} \left(\dfrac{d}{dr} - \frac{\ell}{r}\right)$
 $D_\ell^m = 2\ell(\ell+2)\sqrt{\frac{(\ell+1-m)(\ell+1+m)}{(2\ell+1)(2\ell+3)}} \left(\dfrac{d}{dr}+\frac{\ell+1}{r}\right)$
 
-Note that a common factor of $1/r^2$ has been divided out of each side of the above equations. 
+Note that a common factor of $1/r^2$ has been divided out of each side of the above equations.
+
+#### Expanded form of $A_\ell^m B_\ell^m$ for numerical implementation:
+
+For equation 2, the composed operator $A_\ell^m B_\ell^m$ needs to be expanded with all derivative orders separated. Starting from:
+
+$$A_\ell^m B_\ell^m = [i(\ell(\ell+1)\omega -2m) + \ell(\ell+1)EB_\ell^m] B_\ell^m$$
+
+We expand $(B_\ell^m)^2$ by applying the operator twice:
+
+$$(B_\ell^m)^2 W = \left[\frac{\ell(\ell+1)}{r^2} - \dfrac{d^2}{dr^2}\right]\left[\frac{\ell(\ell+1)}{r^2}W - \dfrac{d^2W}{dr^2}\right]$$
+
+Using the product rule for $\dfrac{d^2}{dr^2}\left[\frac{W}{r^2}\right] = \frac{1}{r^2}\dfrac{d^2W}{dr^2} - \frac{4}{r^3}\frac{dW}{dr} + \frac{6W}{r^4}$, we obtain:
+
+$$(B_\ell^m)^2 W = \dfrac{d^4W}{dr^4} - \frac{2\ell(\ell+1)}{r^2}\dfrac{d^2W}{dr^2} + \frac{4\ell(\ell+1)}{r^3}\frac{dW}{dr} + \frac{\ell(\ell+1)[\ell(\ell+1) - 6]}{r^4}W$$
+
+Therefore, the full expansion with derivatives separated by order is:
+
+$$A_\ell^m B_\ell^m W = \ell(\ell+1)E\dfrac{d^4W}{dr^4} - \left[i(\ell(\ell+1)\omega -2m) + \frac{2\ell^2(\ell+1)^2E}{r^2}\right]\dfrac{d^2W}{dr^2}$$
+$$+ \frac{4\ell^2(\ell+1)^2E}{r^3}\frac{dW}{dr} + \left[\frac{i\ell(\ell+1)(\ell(\ell+1)\omega -2m)}{r^2} + \frac{\ell^2(\ell+1)^2E[\ell(\ell+1) - 6]}{r^4}\right]W$$
+
+This form is suitable for numerical discretization, with coefficients for the 4th, 2nd, 1st, and 0th order derivatives clearly separated. 
 
 #### Part II buoyancy model:
 1) $i \omega \tilde{\mathbf{v}} + 2\hat{\mathbf{z}} \times \tilde{\mathbf{v}} = -\nabla \tilde{P}  - \tilde{N}^2(r) \tilde u_r\hat{\mathbf{r}} + E\nabla^2 \tilde{\mathbf{v}}$
